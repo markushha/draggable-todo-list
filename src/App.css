@@ -1,38 +1,91 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;700&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  min-height: 100vh;
+  width: 100%;
+  background: #282c34;
   color: white;
+  text-align: center;
+  font-size: 18px;
 }
 
-.App-link {
-  color: #61dafb;
+input {
+  font-weight: 200;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid whitesmoke;
+  background: none;
+  width: 250px;
+  height: 30px;
+  color: white;
+  padding: 0 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input:focus {
+  box-shadow: 0px 15px 10px -15px gray; 
+}
+
+.onSubmitBtn {
+  border: none;
+  outline: none;
+  width: 100px;
+  height: 30px;
+  background: none;
+  color: #fff;
+  border: 1px solid whitesmoke;
+  cursor: pointer;
+  margin: 0 0 0 15px;
+  transition: 0.5s ease;
+}
+
+.onSubmitBtn:hover {
+  background: whitesmoke;
+  color: #000;
+}
+
+.todo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 500px;
+  min-width: 300px;
+  min-height: fit-content;
+  word-break: break-all;
+  text-align: left;
+  border-radius: 5px;
+  position: absolute;
+  cursor: move;
+  padding: 5px 10px;
+  box-shadow: 3px 3px 7px #4a4a4a;
+}
+
+.todo__title {
+  color: #222222;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.right-side {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.editBtn {
+  cursor: pointer;
+  margin: 0 10px 0 20px;
+}
+
+.deleteBtn {
+  cursor: pointer;
 }
